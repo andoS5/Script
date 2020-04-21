@@ -1,0 +1,154 @@
+﻿Field,Resource Key,Local translation
+Name,/Home/Navigation Container/CRM Link Repository/SignIn,SE CONNECTER
+Name,/Home/Navigation Container/CRM Link Repository/Register,CRÉER MON COMPTE
+Name,/Home/Navigation Container/Header Repository/Information Pratiques,PLANS & HORAIRES
+Name,/Home/Navigation Container/Header Repository/Boutiques,BOUTIQUES & RESTAURANTS 
+Name,/Home/Navigation Container/Header Repository/Bons Plan,BONS PLANS
+Name,/Home/Navigation Container/Header Repository/Evenements,ÉVÈNEMENTS 
+Name,/Home/Navigation Container/Header Repository/Cinema,À L'ÉCRAN
+Name,/Home/Navigation Container/Header Repository/Services,SERVICES 
+Phrase,/Resource Keys/Search/SearchFieldPlaceholder,RECHERCHE
+Name,/Home/Navigation Container/Header Repository/Information Pratiques,Plans & Horaires
+Name,/Home/Navigation Container/Header Repository/Boutiques,Boutiques & Restaurants 
+Name,/Home/Navigation Container/Header Repository/Bons Plan,Bons plans
+Name,/Home/Navigation Container/Header Repository/Evenements,Évènements 
+Name,/Home/Navigation Container/Header Repository/Cinema,À l'écran
+Name,/Home/Navigation Container/Header Repository/Services,Services 
+Phrase,/Resource Keys/Search/SearchFieldPlaceholder,Recherche 
+Name,/Resource Keys/Navigation/Mall Social Media,Vous avez quitté Odysseum ? L'aventure continue sur les réseaux sociaux !
+Name,/Home/Navigation Container/Footer Repository/Social Media Repository/Facebook,Facebook
+Name,/Home/Navigation Container/Footer Repository/Social Media Repository/Instagram,Instagram
+Name,/Home/Navigation Container/Footer Repository/Mall,ODYSSEUM & VOUS
+Name,/Home/Navigation Container/Footer Repository/Mall/Informations pratiques,Plans & Horaires
+Name,/Home/Navigation Container/Footer Repository/Mall/Boutiques,Boutiques & Restaurants
+Name,/Home/Navigation Container/Footer Repository/Mall/Bons plans,Bons plans
+Name,/Home/Navigation Container/Footer Repository/Mall/Evenements,Évènements
+Name,/Home/Navigation Container/Footer Repository/Mall/Actus,Actualités
+Name,/Home/Navigation Container/Footer Repository/Mall/Services,Services 
+Name,/Home/Navigation Container/Footer Repository/Contact,CONTACT
+Name,/Home/Navigation Container/Footer Repository/Contact/Louer un emplacement temporaire,Nous rejoindre
+Name,/Home/Navigation Container/Footer Repository/Contact/Louer un local,Louer un emplacement permanent
+Name,/Home/Navigation Container/Footer Repository/Contact/Nous Contacter,Louer un emplacement temporaire
+Name,/Home/Navigation Container/Footer Repository/Contact/Votre Centre recrute,Nous contacter
+Name,/Home/Navigation Container/Footer Repository/Newsletter Subscription,Rester informé
+Name,/Home/Navigation Container/Footer Repository/Newsletter Subscription,"Personne, nous disons bien personne, n'aime être mis à l'écart. Inscrivez-vous à notre newsletter pour ne rien rater de notre actualité. "
+Name,/Home/Navigation Container/Footer Repository/Newsletter Subscription,Exemple@gmail.com
+Name,/Home/Navigation Container/Footer Repository/Mobile App Repository,Le fun à portée de main 
+Name,/Home/Navigation Container/Footer Repository/Mobile App Repository,N'attendez pas d'être à la maison. Poursuivez l'aventure en téléchargeant notre application mobile
+Name,/Home/Navigation Container/Footer Repository/Mobile App Repository/AppleStore,Télécharger sur l'App Store
+Name,/Home/Navigation Container/Footer Repository/Mobile App Repository/Playstore,À découvrir sur Google Play
+Name,/Home/Navigation Container/Footer Repository/LegalPages/Data privacy page link,Conditions générales d'utilisation
+Name,/Home/Navigation Container/Footer Repository/LegalPages/Legal notice page link,Mentions légales 
+Name,/Home/Navigation Container/Footer Repository/LegalPages/Terms of service page link,Données personnelles
+Display Day,/Home/Practical Information/Opening Hours Repository/Sunday,Dimanche 
+Display Day,/Home/Practical Information/Opening Hours Repository/Monday,Lundi
+Display Day,/Home/Practical Information/Opening Hours Repository/Tuesday,Mardi
+Display Day,/Home/Practical Information/Opening Hours Repository/Wednesday,Mercredi 
+Display Day,/Home/Practical Information/Opening Hours Repository/Thursday,Jeudi 
+Display Day,/Home/Practical Information/Opening Hours Repository/Friday,Vendredi 
+Display Day,/Home/Practical Information/Opening Hours Repository/Saturday,Samedi 
+Phrase,/Resource Keys/Practical Info/Indicator re-open time,"Dommage, vous arrivez un peu tard. L'aventure continue demain à {0}. Soyez là !"
+Phrase,/Resource Keys/Practical Info/Indicator time left,"Vite vite, plus que {0} heures et {1} minutes avant qu'on ne ferme boutique(s).    "
+Phrase,/Resource Keys/Practical Info/View all operation hours,AFFICHER TOUS LES HORAIRES !
+Phrase,/Resource Keys/Practical Info/Open,Ouvert
+Phrase,/Resource Keys/Practical Info/Close,Fermé
+Phrase,/Resource Keys/Map Azure/Big Title,Pssst ! Venez nous voir : 
+Phrase,/Resource Keys/Map Azure/Input Location Placeholder,Votre adresse
+Phrase,/Resource Keys/Map Azure/Use My Location Text,Me localiser 
+Phrase,/Resource Keys/Map Azure/Foot,À pied
+Phrase,/Resource Keys/Map Azure/Car,En voiture
+Phrase,/Resource Keys/Map Azure/Bus,Transports
+Phrase,/Resource Keys/Map Azure/Minute,min.
+Breadcrumb title,/Home,Accueil
+Phrase,/Resource Keys/Filtering/GridView,Liste
+Phrase,/Resource Keys/Filtering/MapView,Carte
+text,/Home/Media Repository/All Shops,SHOPPING
+Phrase,/Resource Keys/Button/View all Shops,TOUTES LES BOUTIQUES
+Phrase,/Resource Keys/Stores/New Tag,NOUVEAU
+Phrase,/Resource Keys/Stores/Deals Tag,BONS PLANS
+Phrase,/Resource Keys/Stores/PopUp Tag,BOUTIQUE ÉPHÉMÈRE
+Phrase,/Resource Keys/Practical Info/Open,Ouvert
+Phrase,/Resource Keys/Practical Info/Close,Fermé
+text,/Home/Media Repository/All Restaurants,À TABLE
+Phrase,/Resource Keys/Button/View all Restaurants,TOUS LES RESTAURANTS
+text,/Home/Media Repository/All Services,SERVICES
+Phrase,/Resource Keys/Button/View all Services,TOUS LES SERVICES
+Phrase,/Resource Keys/Events/Home Page Related News,ÉVÈNEMENTS
+Phrase,/Resource Keys/Button/View all News,Tous les évènements
+SEO Paragraph,/Home,"Bienvenue sur notre site officiel ! Vivez l'aventure Odysseum du lundi au samedi, de 10h à 20h. 
+Mais avant ça, faites un petit tour sur notre site pour découvrir les horaires d’ouverture exceptionnels, des offres exclusives ou encore les évènements à ne pas manquer. Comment ?Vous êtes encore là ?"
+Breadcrumb title,/Home/Shop Repository,Boutiques & restaurants
+Banner Title,/Home/Shop Repository,BOUTIQUES & RESTAURANTS
+Phrase,/Resource Keys/Store/Search store,Quelle est votre boutique favorite ?
+Phrase,/Resource Keys/Search/FilterText,Filtrer par : 
+Phrase,/Resource Keys/Filtering/Category,Catégories
+Phrase,/Resource Keys/Filtering/Services,Services en magasin
+Phrase,/Resource Keys/Filtering/PlayFull,Partenaires Play.full
+Phrase,/Resource Keys/Filtering/ResultsAsc,{0} résultats triés de A à Z
+Phrase,/Resource Keys/Filtering/ResultsDesc,{0} résultats triés de Z à A
+Phrase,/Resource Keys/Stores/Opening Soon Tag,BIENTÔT DISPONIBLE 
+Phrase,/Resource Keys/Search/SearchResultSeeMoreButton,EN VOIR PLUS ?
+Phrase,/Resource Keys/Filtering/ResetFilter,Supprimer les filtres
+Phrase,/Resource Keys/Store/Exceptional Description,Horaires d'ouverture exceptionnels : votre aventure peut varier d'une heure à l'autre. Contactez votre boutique pour plus d'informations.
+Phrase,/Resource Keys/Stores/NoResultMessage,Aucun résultat pour  << {0} >>
+Phrase,/Resource Keys/Stores/SuggestionMessage,"AUCUN RÉSULTAT, RÉESSAYEZ À NOUVEAU ! "
+Phrase,/Resource Keys/Stores/ParkingLabel,Parking le plus proche 
+Phrase,/Resource Keys/Stores/EntranceLabel,Entrée la plus proche
+Phrase,/Resource Keys/Related Components/Related News and Events Title,NOUVEAUTÉS & ACTUALITÉS
+Phrase,/Resource Keys/Deals/Related Deals Title,BONS PLANS
+Phrase,/Resource Keys/Button/Deal Tiles View on Map,VOIR SUR LE PLAN !
+Phrase,/Resource Keys/Deals/Conditions,Conditions de vente
+Phrase,/Resource Keys/Related Components/Related Services Load More,Toujours plus de services à Odysseum. Ne passez pas à côté !
+Phrase,/Resource Keys/Button/Related Components Load More,EN VOIR PLUS !
+Phrase,/Resource Keys/Related Components/Related Shop Title,VOUS EN VOULEZ PLUS ? VOUS AIMEREZ PEUT-ÊTRE
+Phrase,/Resource Keys/Related Components/Related Shop Load More,Nous avons d'autres boutiques qui pourraient vous intéresser. Ne passez pas à côté !
+Breadcrumb title,/Home/Deals,Bons plans
+Banner Title,/Home/Deals,BONS PLANS
+Phrase,/Resource Keys/Search/FilterText,Trier par
+Phrase,/Resource Keys/Sorting options/LastDays,Derniers jours
+Phrase,/Resource Keys/Sorting options/Asc,Boutiques de A à Z
+Phrase,/Resource Keys/Sorting options/Desc,Boutiques de Z à A
+Phrase,/Resource Keys/Button/Deal Tiles View on Map,VOIR SUR LE PLAN !
+Phrase,/Resource Keys/Deals/Conditions,Condtions de vente
+Phrase,/Resource Keys/Deals/Results Viewed,Vous ne regardez que {0} de nos {1} offres. 
+Phrase,/Resource Keys/Deals/LoadMore,EN VOIR PLUS ?
+Phrase,/Resource Keys/Deals/SuggestionMessage,Pas de panique. Jetez un œil à ces bons plans :
+Phrase,/Resource Keys/Filtering/ResetFilter,Supprimer les filtres
+Phrase,/Resource Keys/Deals/NoLuckMessage,"AUCUN RÉSULTAT, RÉESSAYEZ À NOUVEAU ! "
+Phrase,/Resource Keys/Deals/SuggestionMessage,Pas de panique. Jetez un œil à ces bons plans :
+Breadcrumb title,/Home/Services,Services
+Banner Title,/Home/Services,SERVICES
+Phrase,/Resource Keys/Button/View all Services,Tous les services
+Phrase,/Resource Keys/Button/Discover,EN SAVOIR PLUS !
+Phrase,/Resource Keys/Related Components/Related Services Load More,D'autres boutiques offrent ce service. Ne passez pas à côté !
+Phrase,/Resource Keys/Related Components/Related Shop Title,VOUS EN VOULEZ PLUS ? VOUS AIMEREZ PEUT-ÊTRE 
+Phrase,/Resource Keys/Button/View Store,EN SAVOIR PLUS 
+Phrase,/Resource Keys/Button/View on map,VOIR SUR LE PLAN
+Phrase,/Resource Keys/Events/Home Page Related News,VOUS EN VOULEZ PLUS ? VOUS AIMEREZ PEUT-ÊTRE
+Phrase,/Resource Keys/Button/ViewÂ allÂ News,TOUTES LES ACTUALITÉS
+Phrase,/Resource Keys/Button/Add to calendar,BLOQUEZ VOTRE AGENDA ! 
+Phrase,/Resource Keys/Button/View on map,VOIR SUR LA CARTE
+Breadcrumb title,/Home/Practical Information,Horaires & accès
+Banner Title,/Home/Navigation Container/Header Repository/Information Pratiques,HORAIRES & ACCÈS
+Phrase,/Resource Keys/Practical Info/OpeningLabel,NOUS SOMMES OUVERT
+Phrase,/Resource Keys/Practical Info/Mall Closed Label,NOUS SOMMES FERMÉ
+Phrase,/Resource Keys/Practical Info/Normal Hours Label,HORAIRES ODYSSEUM
+Phrase,/Resource Keys/Practical Info/Main Search Store Label,HORAIRES D'OUVERTURE
+Phrase,/Resource Keys/Store/Search store,Chercher une boutique
+Phrase,/Resource Keys/Map Azure/Input Location Placeholder,RECHERCHE
+Phrase,/Resource Keys/Practical Info/Exceptional Hours Label,HORAIRES D'OUVERTURE EXCEPTIONNELS
+Phrase,/Resource Keys/Map Azure/Big Title,VENEZ NOUS RENDRE VISITE
+Phrase,/Resource Keys/Map Azure/Mall Name Address Text,Adresse Odysseum
+Phrase,/Resource Keys/Map Azure/Information Content,COMMENT VENEZ-VOUS ?
+Phrase,/Resource Keys/Map Azure/Foot,À pied
+Phrase,/Resource Keys/Map Azure/Car,En voiture
+Phrase,/Resource Keys/Map Azure/Bus,Transports 
+Phrase,/Resource Keys/Map Azure/Plan Your Visit Text,PLANIFIER VOTRE VISITE
+Phrase,/Resource Keys/Map Azure/Use My Location Text,ME LOCALISER
+Phrase,/Resource Keys/Map Azure/Input Location Placeholder,D'où venez-vous ?
+Phrase,/Resource Keys/Practical Info/Re Oening Label,{0} est ouvert
+Phrase,/Resource Keys/Practical Info/Search closed label,{0} est fermé
+Phrase,/Resource Keys/Practical Info/Store Hours Label,Horaires boutique
+Phrase,/Resource Keys/Practical Info/View all operation hours,Voir tous les horaires
+Phrase,/Resource Keys/Practical Info/Display Exceptional Date,{0} {1} {2}
+Phrase,/Resource Keys/Practical Info/Display Time,{0} - {1}

@@ -1,0 +1,63 @@
+(Import-Function $Nunction-Name)
+
+-Import Mall FROM csv
+Script: Scaffolding-Import-Mall-From-Csv
+Modele CSV: CSV/mall_to_import.csv
+
+-Import Settings MALL (param inside CSV)
+Script: Scaffolding-Set-Settings-Mall-From-CSV
+Modele CSV: CSV/Setting-Sample-1.csv , CSV/Setting-Sample-2.csv and CSV/Setting-Sample-3.csv
+
+-Update Page design
+Content-Update-Page-Design #REGION #LANGUAGE #MALLNAME
+Model CSV: CSV/pageDesign.csv
+
+-Upload images
+#CONTENTTYPE = Services or Stores (AND NOT Shops!!!)
+Script: Content-UploadImages #REGION #LANGUAGE #MALLNAME #CONTENTTYPE
+
+-Import Resource Keys 
+Script: Import-Content-Resource-Key
+Modele CSV: CSV/Odysseum-resource-key.csv #REGION #LANGUAGE #MALLNAME
+
+-Import Pratical Info (param inside CSV)
+Script: Import-Content-Practical-Information
+Modele CSV: CSV/Odysseum-Practical Information.csv
+
+-Import Header (param inside CSV)
+Script: Import-Content-Header
+Modele CSV: CSV/Odysseum-Header.csv
+
+-Import Footer (param inside CSV)
+Script: Import-Content-Footer
+Modele CSV: CSV/Odysseum-Footer.csv
+
+
+-Import Home Page
+Script: Import-Content-Home-Page
+Modele CSV: CSV/Home-Page-Content-odysseum.csv
+
+-Import Services
+Script: Import-Content-Services #REGION #LANGUAGE #MALLNAME
+Modele CSV: CSV/odysseum-services.csv
+
+-Import Shops & Resto
+Script: Import-Content-Stores #REGION #LANGUAGE #MALLNAME
+Modele CSV: CSV/odysseum-stores.csv
+
+-Runable
+	Run Scaffolding and settings
+	Script: Run-Scaffolding-Settings
+
+	Run Import all content
+	Script: Run-Import-Content
+
+check list
+==========
+- Format/verify document [mall,images name, ressource keys, practical informations, header, footer, services, shop and resto,]
+-Runable
+	Run Scaffolding and settings
+	Script: Run-Scaffolding-Settings
+
+	Run Import all content
+	Script: Run-Import-Content
