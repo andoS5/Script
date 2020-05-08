@@ -1,5 +1,5 @@
-$NewsSource = "master:/sitecore/content/Klepierre/France/Arcades/Home/Events and News/News/teletravail et enfants le guide de survie"
-# $BannerSource = "master:/sitecore/content/Klepierre/France/Arcades/Home/Banner Repository/Homepage Banner/devenez un jedi du teletravail"
+$NewsSource = "master://sitecore/content/Klepierre/France/Arcades/Home/Events and News/News/sauve ton commerce"
+# $BannerSource = "master:/sitecore/content/Klepierre/France/Arcades/Home/Banner Repository/Homepage Banner/solidarite entre voisins"
 $Region = "France"
 $version = "fr-FR"
 $RegionRepository = "master:/sitecore/content/Klepierre/$Region"
@@ -8,10 +8,10 @@ $malls = Get-ChildItem -Path $RegionRepository | Where { $_.TemplateID -eq "{465
 
 foreach ($mall in $malls) {
     $mallName = $mall.Name
-    # $NewsDestination = "master:/sitecore/content/Klepierre/$Region/$mallName/Home/Events and News/News/devenez un jedi du teletravail"
-    $NewsDestination = "master:/sitecore/content/Klepierre/$Region/$mallName/Home/Events and News/News/teletravail et enfants le guide de survie"
-    # $BannerDestination = "master:/sitecore/content/Klepierre/$Region/$mallName/Home/Banner Repository/Homepage Banner/devenez un jedi du teletravail"
-    if (!($mallName -match "^Arcades") -and !($mallName -match "^ValDeuropeEn")) {
+    $NewsDestination = "master:/sitecore/content/Klepierre/$Region/$mallName/Home/Events and News/News/sauve ton commerce"
+    # $NewsDestination = "master:/sitecore/content/Klepierre/$Region/$mallName/Home/Events and News/News/sauve ton commerce"
+    # $BannerDestination = "master:/sitecore/content/Klepierre/$Region/$mallName/Home/Banner Repository/Homepage Banner/solidarite entre voisins"
+    if (!($mallName -match "^Arcades") -and !($mallName -match "^Avenir") -and !($mallName -match "^Odysseum")) { #-and !($mallName -match "^Odysseum")
         if (!(Test-Path -Path $NewsDestination -ErrorAction SilentlyContinue)) {
             Write-Host "Adding for $mallName" -ForegroundColor Yellow
             Copy-Item -Path $NewsSource -Destination $NewsDestination

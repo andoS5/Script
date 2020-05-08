@@ -68,7 +68,7 @@ function Content-UploadImages {
       $count++
     }
 
-    Write-Host "Update Alt test - End"
+    Write-Host "Update Alt text - End"
   }
 
   end {

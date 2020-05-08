@@ -5,7 +5,7 @@ foreach ($region in $regions) {
     
     foreach ($mall in $malls) {
         $mallName = $mall.Name
-        if ($mallName -eq "Nordbyen") {
+        if ($mallName -eq "ForumDuisburg") {
             $settingPath = "$($mall.FullPath)/Settings/Site Grouping/$mallName"
             $settingItem = Get-Item -Path $settingPath
             $Language = $settingItem["Language"]

@@ -19,7 +19,7 @@ function update-workflow {
                 $version = $settingItem["Language"]
 
                 # $path = "master:/sitecore/content/Klepierre/$RegionName/$mallName/Home"
-                $path = "master:/sitecore/content/Klepierre/$RegionName/$mallName/Home/Events and News/News/devenez un jedi du teletravail"
+                $path = "master:/sitecore/content/Klepierre/$RegionName/$mallName/Home/Events and News/News/solidarite entre voisins"
 
                 $item = Get-Item -Path $path -Language $version
                 Write-Host "Editing $RegionName/$mallName - Start"

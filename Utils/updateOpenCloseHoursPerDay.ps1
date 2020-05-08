@@ -87,7 +87,8 @@ function CleanHour {
 }
 
 $Datas = Utils-Upload-CSV-File -Title "Open/Close Stores"
-
+$count = $Datas.Count
+$cpt = 1
 foreach ($data in $Datas) {
     $shopID = $data["ShopID"].Trim()
 
@@ -180,5 +181,7 @@ foreach ($data in $Datas) {
     $day[6]['Opening Time'] = CleanHour $data["SundayOpening"].Trim()
     $day[6]['Closing Time'] = CleanHour $data["SundayClosing"].Trim()
     $day[6].Editing.EndEdit() | Out-Null
- 
+    
+    Write-Host "[$cpt / $count] in process"
+    $cpt++
 }

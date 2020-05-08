@@ -6,7 +6,7 @@
 	 - $picturePresets : list of picture presets for the cropping, these default values below are the picture presets we use for jolt editorials.
    
 #>
-$EditorialImagePath = "/sitecore/media library/Project/Klepierre/France/Shared/covid19/Home-page"
+$EditorialImagePath = "/sitecore/media library/Project/Klepierre/France/Shared/covid19/Home-page/arc"
 
 $imagesToCrop = @(
 
@@ -18,7 +18,6 @@ $picturePresets = @(
 )
 
 
-
 $editorialImageContainer = Get-Item "master:$EditorialImagePath" -ErrorAction SilentlyContinue
 
 if($editorialImageContainer -eq $null){
@@ -26,8 +25,9 @@ if($editorialImageContainer -eq $null){
 	Exit
 }
 	
-$allEditorialImages = $editorialImageContainer.Axes.GetDescendants() | Where-Object {(($_.TemplateID.ToString() -eq "{F1828A2C-7E5D-4BBD-98CA-320474871548}") -or  ($_.TemplateID.ToString() -eq "{DAF085E8-602E-43A6-8299-038FF171349F}"))}
-
+$allEditorialImages = $editorialImageContainer.Axes.GetDescendants() | Where-Object {(($_.TemplateID.ToString() -eq "{F1828A2C-7E5D-4BBD-98CA-320474871548}") -or  ($_.TemplateID.ToString() -eq "{DAF085E8-602E-43A6-8299-038FF171349F}") -or  ($_.TemplateID.ToString() -eq "{EB3FB96C-D56B-4AC9-97F8-F07B24BB9BF7}"))}
+# Write-Host $allEditorialImages.Count
+# Exit
 if($imagesToCrop.Count -gt 0){
 	$allEditorialImages = $allEditorialImages | Where-Object { $imagesToCrop -contains $_.Name }
 }
@@ -37,7 +37,8 @@ $allEditorialImages | Foreach-Object{
 		$idsList += $_.ID.ToString()
 }
 
-$handler = New-Object "Sitecore.Extension.ImageCropper.Agent.CropperAgent"	#MISSING DLL
+
+$handler = New-Object "Kortex.Foundation.Pipelines.Events.ItemEventHandler"	#MISSING DLL
 Write-Host "Start"
 foreach($picturePreset in $picturePresets){
 	$picturePresetItem = Get-Item master: -ID $picturePreset -Language en

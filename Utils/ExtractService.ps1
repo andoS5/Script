@@ -15,17 +15,20 @@ foreach ($region in $regions) {
     
     foreach ($mall in $malls) {
         $mallName = $mall.Name
-        if ($mallName -eq "LesplanadeNL") {
+        # if ($mallName -eq "Arcades") {
 
-        
-            $MallID = $mall.ID
-            $outputFilePath = "$($AppPath)/Services_$($RegionName)_$($MallName).csv"
+            
+            $outputFilePath = "$($AppPath)/$($RegionName)_$($MallName).csv"
             $array = New-Object System.Collections.ArrayList
 
             $settingPath = "$($mall.FullPath)/Settings/Site Grouping/$mallName"
             $settingItem = Get-Item -Path $settingPath
             $version = $settingItem["Language"]
             $TargetHostName = "https://" + $settingItem["TargetHostName"]
+
+            $mallSettingsPath = "master:/sitecore/content/Klepierre/$RegionName/$mallName/Settings/Mall Settings" 
+            $mallSettingsItem = Get-Item -Path $mallSettingsPath -Language $version
+            $MallID = $mallSettingsItem["Sapid"]
         
             $serviceRepo = "master:/sitecore/content/Klepierre/$RegionName/$mallName/Home/Services"
             $services = Get-ChildItem -Path $serviceRepo -Language $version | Where { $_.TemplateID -eq "{80090502-71A4-42A5-8031-26A219977FBC}" }
@@ -40,10 +43,12 @@ foreach ($region in $regions) {
                 $imageSource = $Fields['Tile Image']
                 $regpattern = "({)(.*)(})"
                 $ImageID = [regex]::Match($imageSource, $regpattern)
-
+                # Write-Host $ImageID 
+                # Exit
                 # $imagePath = "master:/sitecore/media library/" + $imageSource
                 $item = Get-Item -Path "master:" -ID "$ImageID"
                 $imageSourceRaw = $item.FullPath
+
                 $imageSource = $imageSourceRaw.Replace("/sitecore/media library","")
                 $imageExtension ="."+$item.Extension
                 $thumbnailUrl = $cdnLink + $imageSource + $imageExtension
@@ -68,7 +73,7 @@ foreach ($region in $regions) {
             Finally {
                 Remove-Item -Path $outputFilePath
             }
-        }
+        # }
     }
 }  
 
