@@ -15,7 +15,7 @@ foreach ($Region in $Regions) {
         $settingPath = "/sitecore/content/Klepierre/$regionName/$MallName/Settings/Site Grouping/$MallName"
         $settingItem = Get-Item -Path $settingPath
         $version = $settingItem["Language"]
-        Write-Host "Startint update for - $regionName - $MallName"
+        Write-Host "Starting update for - $regionName - $MallName"
         $ralPath = "master:/sitecore/content/Klepierre/$regionName/$MallName/Presentation/Partial Designs/Forms/Rent a Local"
         # $cpPath = "master:/sitecore/content/Klepierre/$RegionName/$MallName/Presentation/Partial Designs/Forms/Contact Page"
         $ralItem = Get-Item -Path $ralPath -Language $version
