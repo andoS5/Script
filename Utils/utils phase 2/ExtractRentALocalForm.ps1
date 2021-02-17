@@ -112,6 +112,9 @@ function ExtractRentALocalForm {
             $OpenGraphImage = $Local['Open Graph Image']
             $CanonicalUrl = $Local['Canonical Url']
             $ShowonMobile = $Local['Show on Mobile']
+            $Readmore = $Local['Read more']
+            $pageTitle = $Local['Page Title']
+            $metaDescription = $Local['Meta Description'] 
 
             #placeholder
             $page = "master:/sitecore/Forms/$RegionName/$MallName/Rent A Local/Page"
@@ -178,6 +181,7 @@ function ExtractRentALocalForm {
             $MessageForm = $MessageFormItem['Placeholder Text']
 
             
+            
 
             $obj = New-Object System.Object
 
@@ -197,6 +201,10 @@ function ExtractRentALocalForm {
             $obj | Add-Member -MemberType NoteProperty -Name "LegalNoticeUnderneath"-Value $LegalNoticeUnderneath
             $obj | Add-Member -MemberType NoteProperty -Name "SEOParagraph"-Value $SEOParagraph
             $obj | Add-Member -MemberType NoteProperty -Name "OpenGraphImage"-Value $OpenGraphImage
+
+            $obj | Add-Member -MemberType NoteProperty -Name "Readmore"-Value $Readmore
+            $obj | Add-Member -MemberType NoteProperty -Name "pageTitle"-Value $pageTitle
+            $obj | Add-Member -MemberType NoteProperty -Name "metaDescription"-Value $metaDescription
 
             $obj | Add-Member -MemberType NoteProperty -Name "CanonicalUrl"-Value $CanonicalUrl
             $obj | Add-Member -MemberType NoteProperty -Name "ShowonMobile"-Value $ShowonMobile
@@ -233,7 +241,7 @@ function ExtractRentALocalForm {
             
         }
         #end loop
-        $array | Select-Object RentForm, Breadcrumbtitle, Showonbreadcrumb, RentLocalTitle, RentLocalDescription, BannerTitle, BackgroundImage, LargeImage, MobileImage, TabletImage, ThankYouTitle, ThankYouDescription, LegalNoticeTitle, LegalNoticeUnderneath, SEOParagraph, OpenGraphImage, CanonicalUrl,ShowonMobile, Brandname, BrandnameValidators, Companyname, CompanynameValidators, Lastname, LastnameValidators, Firstname, FirstnameValidators, Emailaddress, EmailaddressValidators, Phone, Phonevalidators, SurfaceArea, SurfaceAreaValidators, MessageForm, ReCaptcha, SubmitButton | Export-Csv -Encoding UTF8 -notypeinformation -Path $outputFilePath
+        $array | Select-Object RentForm, Breadcrumbtitle, Showonbreadcrumb, RentLocalTitle, RentLocalDescription, BannerTitle, BackgroundImage, LargeImage, MobileImage, TabletImage, ThankYouTitle, ThankYouDescription, LegalNoticeTitle, LegalNoticeUnderneath, SEOParagraph, OpenGraphImage, CanonicalUrl,ShowonMobile, Readmore,pageTitle,metaDescription, Brandname, BrandnameValidators, Companyname, CompanynameValidators, Lastname, LastnameValidators, Firstname, FirstnameValidators, Emailaddress, EmailaddressValidators, Phone, Phonevalidators, SurfaceArea, SurfaceAreaValidators, MessageForm, ReCaptcha, SubmitButton | Export-Csv -Encoding UTF8 -notypeinformation -Path $outputFilePath
         Try {
             Send-File -Path $outputFilePath
         }
@@ -246,6 +254,6 @@ function ExtractRentALocalForm {
 }
 
 $RegionName = "Denmark"
-$MallName = "fields"
+$MallName = "Fields"
 $Language = "da"
 ExtractRentALocalForm $RegionName $MallName $Language

@@ -108,6 +108,8 @@ function ExtractContactForms {
         $Readmore = $ContactItem['Read more']
         $LegalNoticeUnderneath = $ContactItem['Legal Notice Underneath']
         $SEOParagraph = $ContactItem['SEO Paragraph']
+        $pageTitle = $ContactItem['Page Title']
+        $metaDescription = $ContactItem['Meta Description'] 
 
         $OpenGraphImage = if (![string]::IsNullOrEmpty($ContactItem['Open Graph Image'])) { Get-Name-By-ID (Get-Image-Item-Id $ContactItem['Open Graph Image']) }else { "" }    
 
@@ -161,21 +163,22 @@ function ExtractContactForms {
             }
             elseif ($childName -eq "City") {
                 $CityForm = $pageForm['Placeholder Text'] 
-                $CityFormValidators = getSelectedItemName $pageForm['Validations'] $Language 
+                $CityFormValidators = if ($pageForm['Validations']) { getSelectedItemName $pageForm['Validations'] $Language } else { "" }
             }
             
         }
 
         $MessageFormItem = Get-ChildItem -Path $page -Language $Language  | Where { $_.TemplateID -eq "{D8386D04-C1E3-4CD3-9227-9E9F86EF3C88}" }
         $MessageForm = $MessageFormItem['Placeholder Text']
-        $MessageFormValidators = getSelectedItemName $MessageFormItem['Validations']
+        $MessageFormValidators = getSelectedItemName $MessageFormItem['Validations'] $Language 
 
         $EmailaddressItem = Get-ChildItem -Path $page -Language $Language  | Where { $_.TemplateID -eq "{886ADEC1-ABF8-40E1-9926-D9189C4E8E1B}" }
         $Emailaddress = $EmailaddressItem['Placeholder Text']
+        $EmailaddressValidators = getSelectedItemName $EmailaddressItem['Validations'] $Language 
 
         $recaptcheItem = Get-ChildItem -Path $page -Language $Language  | Where { $_.TemplateID -eq "{FC18F915-EAC6-460A-8777-6E1376A9EA09}" }
         $ReCaptcha = $recaptcheItem['Text']
-        $EmailaddressValidators = getSelectedItemName $recaptcheItem['Validations'] $Language 
+        
 
         $SubmitButtonItem = Get-ChildItem -Path $page -Language $Language  | Where { $_.TemplateID -eq "{94A46D66-B1B8-405D-AAE4-7B5A9CD61C5E}" }
         $SubmitButton = $SubmitButtonItem['Title']
@@ -203,6 +206,8 @@ function ExtractContactForms {
         $obj | Add-Member -MemberType NoteProperty -Name "ThankYouDescription"-Value $ThankYouDescription
         $obj | Add-Member -MemberType NoteProperty -Name "LegalNoticeTitle"-Value $LegalNoticeTitle
         $obj | Add-Member -MemberType NoteProperty -Name "Readmore"-Value $Readmore
+        $obj | Add-Member -MemberType NoteProperty -Name "pageTitle"-Value $pageTitle
+        $obj | Add-Member -MemberType NoteProperty -Name "metaDescription"-Value $metaDescription
         $obj | Add-Member -MemberType NoteProperty -Name "LegalNoticeUnderneath"-Value $LegalNoticeUnderneath
         $obj | Add-Member -MemberType NoteProperty -Name "SEOParagraph"-Value $SEOParagraph
         $obj | Add-Member -MemberType NoteProperty -Name "OpenGraphImage"-Value $OpenGraphImage
@@ -234,7 +239,7 @@ function ExtractContactForms {
         $array.Add($obj) | Out-Null         
         Write-Host "Extract done " -ForegroundColor Green
 
-        $array | Select-Object Breadcrumbtitle, Showonbreadcrumb, BannerTitle, BackgroundImage, LargeImage, MobileImage, TabletImage, AddressTitle, Mallname, Address1, Address2, CityAdress, PostalCode, ContactTitle, AddressTitleContact, CallAndSocialTitle, CallAndSocialPhoneNumber, ThankYouTitle, ThankYouDescription, LegalNoticeTitle, Readmore, LegalNoticeUnderneath, SEOParagraph, OpenGraphImage, CanonicalUrl, ShowonMobile, facebookIcon, facebookLink, InstagramIcon, InstagramLink, Introductionform, FirstName, FirstNameValidators, LastName, LastNameValidators, Phone, PhoneValidators, Emailaddress, EmailaddressValidators, PostCode, PostCodeValidators, CityForm,CityFormValidators, MessageForm, MessageFormValidators, ReCaptcha, SubmitButton | Export-Csv -Encoding UTF8 -notypeinformation -Path $outputFilePath
+        $array | Select-Object Breadcrumbtitle, Showonbreadcrumb, BannerTitle, BackgroundImage, LargeImage, MobileImage, TabletImage, AddressTitle, Mallname, Address1, Address2, CityAdress, PostalCode, ContactTitle, AddressTitleContact, CallAndSocialTitle, CallAndSocialPhoneNumber, ThankYouTitle, ThankYouDescription, LegalNoticeTitle, Readmore, pageTitle, MetaDescription, LegalNoticeUnderneath, SEOParagraph, OpenGraphImage, CanonicalUrl, ShowonMobile, facebookIcon, facebookLink, InstagramIcon, InstagramLink, Introductionform, FirstName, FirstNameValidators, LastName, LastNameValidators, Phone, PhoneValidators, Emailaddress, EmailaddressValidators, PostCode, PostCodeValidators, CityForm, CityFormValidators, MessageForm, MessageFormValidators, ReCaptcha, SubmitButton | Export-Csv -Encoding UTF8 -notypeinformation -Path $outputFilePath
         Try {
             Send-File -Path $outputFilePath
         }
@@ -246,7 +251,7 @@ function ExtractContactForms {
 }
 
 $RegionName = "Denmark"
-$MallName = "fields"
+$MallName = "Fields"
 $Language = "da"
 ExtractContactForms $RegionName $MallName $Language
 
