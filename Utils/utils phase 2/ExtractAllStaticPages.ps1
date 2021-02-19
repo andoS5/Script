@@ -110,6 +110,6 @@ function ExtractAllStaticPages {
 }
 
 $RegionName = "France"
-$MallName = "Odysseum"
+$MallName = "RivesDarcins"
 $Language = "fr-fr"
 ExtractAllStaticPages $RegionName $MallName $Language

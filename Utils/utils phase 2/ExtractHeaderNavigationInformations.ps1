@@ -70,7 +70,12 @@ function ExtractHeaderNavigationInformations {
                 $Link = $navigation['Link']
             }
             elseif ($IsExternalLink -eq 0) {
-                $Link = if (![string]::IsNullOrEmpty($navigation['Link'])) { Get-Name-By-ID (Get-Image-Item-Id $navigation['Link']) }else { "" }
+                if ($navigation['Link'].Contains("http")) {
+                    $Link = ((Select-String '(http[s]?)(:\/\/)([^\s,]+)(?=")' -Input $navigation['Link']).Matches.Value)
+                }else {
+                    $Link = if (![string]::IsNullOrEmpty($navigation['Link'])) { Get-Name-By-ID (Get-Image-Item-Id $navigation['Link']) }else { "" }
+                }
+                
             }
             $ShowChildren = $navigation['Show Children']
             $IsActive = $navigation['Is Active']
